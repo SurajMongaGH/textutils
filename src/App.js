@@ -2,9 +2,9 @@ import "./App.css";
 import Navbar from "./Components/Navbar";
 import TextForm from "./Components/TextForm";
 import Alert from "./Components/Alert"
-import About from './Components/About'
+//import About from './Components/About'
 import { useState } from "react";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom"
+//mport {BrowserRouter as Router, Switch, Route} from "react-router-dom"
 
 function App() {
   const [alert, setAlert] = useState(null)
@@ -31,22 +31,22 @@ function App() {
   }
   return (
     <>
-    <Router>
+    {/* <Router> */}
       <Navbar title="TextUtils" mode={Mode} toogleMode={toogleMode}/>
       <Alert alert={alert}/>
       <div className="container my-3" >
-        <Switch>
+        {/* <Switch>
         
-        <Route exact path="/">
+        <Route exact path="/"> */}
         <TextForm title="Enter the text to analyze" showAlert={showAlert} mode={Mode} />
-        </Route>
+        {/* </Route>
         <Route exact path="/about">
             <About/>
       </Route>
         
-      </Switch>
+      </Switch> */}
       </div>
-    </Router>
+    {/* </Router> */}
    
     </>
   );
